@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-const mainContainer = document.getElementById('products__main');
+const productContainer = document.getElementById('products__main');
 
 const products = [];
 
@@ -10,5 +10,8 @@ for (let i = 0; i < 3; i++) {
 }
 
 products.forEach((product) => {
-  mainContainer.insertAdjacentHTML('afterend', `<div>${product}</div>`);
+  productContainer.insertAdjacentHTML(
+    'beforeend',
+    `<div style="color:red;">${product}</div>`
+  );
 });

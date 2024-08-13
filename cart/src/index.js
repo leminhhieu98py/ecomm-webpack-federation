@@ -1,14 +1,14 @@
 import faker from 'faker';
 
-const mainContainer = document.getElementById('cart__main');
+const cartContainer = document.getElementById('cart__main');
 
-const products = [];
+const carts = [];
 
 for (let i = 0; i < 3; i++) {
-  const product = faker.commerce.product();
-  products.push(product);
+  const cart = faker.commerce.product();
+  carts.push(cart);
 }
 
-products.forEach((product) => {
-  mainContainer.insertAdjacentHTML('afterend', `<div>${product}</div>`);
+carts.forEach((cart) => {
+  cartContainer.insertAdjacentHTML('beforeend', `<div>${cart}</div>`);
 });
