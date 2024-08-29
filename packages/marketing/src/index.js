@@ -1,1 +1,1 @@
-console.log('hello marketing');
+import('./mount');
