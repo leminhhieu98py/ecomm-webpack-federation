@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
 const mount = (element) => {
-  ReactDOM.render(<h1>Hello from Marketing</h1>, element);
+  ReactDOM.render(<App />, element);
 };
 
 const container = document.querySelector('#_marketing-container');
