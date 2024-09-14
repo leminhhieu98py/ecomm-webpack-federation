@@ -6,7 +6,7 @@ export default () => {
     <>
       <h1>Root container</h1>
       {/* TODO: remove after testing AWS deployment */}
-      <h1>hello</h1>
+      <h1>hello 2</h1>
       <hr />
       <Marketing />
     </>
