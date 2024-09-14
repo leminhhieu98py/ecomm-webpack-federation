@@ -145,7 +145,7 @@ export default function Pricing() {
   return (
     <React.Fragment>
       {/* TODO: remove after testing AWS deployment */}
-      hello
+      hello 22
       {/* Hero unit */}
       <Container maxWidth="sm" component="main" className={classes.heroContent}>
         <Typography
