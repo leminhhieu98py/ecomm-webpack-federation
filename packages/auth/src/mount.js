@@ -5,7 +5,7 @@ import App from './App';
 
 const mount = (
   element,
-  { onMarketingNavigate, isMemoryHistory = true, initialPath = '/' }
+  { onAuthNavigate, isMemoryHistory = true, initialPath = '/' }
 ) => {
   const history = isMemoryHistory
     ? createMemoryHistory({
@@ -13,20 +13,21 @@ const mount = (
       })
     : createBrowserHistory();
 
-  if (onMarketingNavigate) {
-    history.listen(onMarketingNavigate);
+  if (onAuthNavigate) {
+    history.listen(onAuthNavigate);
   }
 
+  console.log('auth element', element);
   ReactDOM.render(<App history={history} />, element);
 
   const onParentNavigate = (location) => {
-    const { pathname: marketingPathName } = history.location;
+    const { pathname: authPathName } = history.location;
     const parentPathname = location.pathname;
 
-    console.log('marketing parentPathname', parentPathname);
-    console.log('marketing marketingPathName', marketingPathName);
+    console.log('auth parentPathname', parentPathname);
+    console.log('auth authPathName', authPathName);
 
-    if (parentPathname !== marketingPathName) {
+    if (parentPathname !== authPathName) {
       history.push(parentPathname);
     }
   };
@@ -36,7 +37,7 @@ const mount = (
   };
 };
 
-const container = document.querySelector('#_marketing-container');
+const container = document.querySelector('#_auth-container');
 
 if (container) {
   mount(container, { isMemoryHistory: false });
