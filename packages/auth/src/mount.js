@@ -5,7 +5,7 @@ import App from './App';
 
 const mount = (
   element,
-  { onAuthNavigate, isMemoryHistory = true, initialPath = '/' }
+  { onAuthNavigate, isMemoryHistory = true, initialPath = '/', onSignIn }
 ) => {
   const history = isMemoryHistory
     ? createMemoryHistory({
@@ -18,7 +18,7 @@ const mount = (
   }
 
   console.log('auth element', element);
-  ReactDOM.render(<App history={history} />, element);
+  ReactDOM.render(<App history={history} onSignIn={onSignIn} />, element);
 
   const onParentNavigate = (location) => {
     const { pathname: authPathName } = history.location;
