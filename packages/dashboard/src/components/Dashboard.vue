@@ -3,7 +3,7 @@
     <div class="p-col-12 p-lg-4">
       <div class="card summary">
         <span class="title">Users</span>
-        <span class="detail">Number of visitors haha</span>
+        <span class="detail">Number of visitors</span>
         <span class="count visitors">12</span>
       </div>
     </div>
