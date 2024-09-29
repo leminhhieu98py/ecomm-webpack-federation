@@ -17,15 +17,11 @@ const mount = (
     history.listen(onAuthNavigate);
   }
 
-  console.log('auth element', element);
   ReactDOM.render(<App history={history} onSignIn={onSignIn} />, element);
 
   const onParentNavigate = (location) => {
     const { pathname: authPathName } = history.location;
     const parentPathname = location.pathname;
-
-    console.log('auth parentPathname', parentPathname);
-    console.log('auth authPathName', authPathName);
 
     if (parentPathname !== authPathName) {
       history.push(parentPathname);

@@ -23,9 +23,6 @@ const mount = (
     const { pathname: marketingPathName } = history.location;
     const parentPathname = location.pathname;
 
-    console.log('marketing parentPathname', parentPathname);
-    console.log('marketing marketingPathName', marketingPathName);
-
     if (parentPathname !== marketingPathName) {
       history.push(parentPathname);
     }
