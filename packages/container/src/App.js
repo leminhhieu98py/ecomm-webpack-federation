@@ -10,6 +10,7 @@ import { useState } from 'react';
 
 const Auth = lazy(() => import('./RemoteComponents/Auth'));
 const Marketing = lazy(() => import('./RemoteComponents/Marketing'));
+const Dashboard = lazy(() => import('./RemoteComponents/Dashboard'));
 
 const generateClassName = createGenerateClassName({
   productionPrefix: 'container'
@@ -35,6 +36,7 @@ export default () => {
             <Route path="/auth">
               <Auth onSignIn={onSignIn} />
             </Route>
+            <Route path="/dashboard" component={Dashboard} />
             <Route path="/" component={Marketing} />
           </Switch>
         </Suspense>

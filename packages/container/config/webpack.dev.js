@@ -18,7 +18,8 @@ const devConfig = {
       name: 'container',
       remotes: {
         marketing: 'marketing@http://localhost:3002/remoteEntry.js',
-        auth: 'auth@http://localhost:3003/remoteEntry.js'
+        auth: 'auth@http://localhost:3003/remoteEntry.js',
+        dashboard: 'dashboard@http://localhost:3004/remoteEntry.js'
       },
       shared: ['react', 'react-dom']
     })
